@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.title [ fhir:value "Food Allergy Implementation Guide"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2021-07-28T07:56:56+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-07-28T07:59:44+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Quality of Life Workgroup"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -314,6 +314,18 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/food-allergy" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is the base Capability Statement for FHIR. It represents a server that provides the full set of functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -323,7 +335,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Food Allergy" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Food Allergy profile" ]
      ], [
-       fhir:index 1;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -336,7 +348,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Food Allergies" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Main Food allergies." ]
      ], [
-       fhir:index 2;
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -352,7 +364,7 @@
          fhir:link <http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy>
        ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

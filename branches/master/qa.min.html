@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 0, warn = 2, info = 0 -->
+<!-- broken links = 0, errors = 80, warn = 3, info = 0 -->
 <head>
   <title>FoodAllergyIG : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for FoodAllergyIG</h1>
- <p>Generated Wed Jul 28 07:57:08 UTC 2021, FHIR version 4.0.1 for example.fhir.uv.food-allergy#0.1.0-test (canonical = <a href="http://somewhere.org/fhir/myig">http://somewhere.org/fhir/myig</a> (<a href="http://somewhere.org/fhir/myig/history.html">history</a>)). See <a href="/github/workspace/output/qa.html">Full QA Report</a></p>
+ <p>Generated Wed Jul 28 07:59:55 UTC 2021, FHIR version 4.0.1 for example.fhir.uv.food-allergy#0.1.0-test (canonical = <a href="http://somewhere.org/fhir/myig">http://somewhere.org/fhir/myig</a> (<a href="http://somewhere.org/fhir/myig/history.html">history</a>)). See <a href="/github/workspace/output/qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.77</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = example.fhir.uv.food-allergy, Canonical = http://somewhere.org/fhir/myig</td></tr>
@@ -37,14 +37,17 @@
  <br/><br/>The copyrightYear parameter ('2019+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://somewhere.org/fhir/myig (Problem #1 with package-list.json at http://somewhere.org/fhir/myig: http://somewhere.org/fhir/myig/package-list.json)</td></tr>
- <tr><td>Summary:</td><td> broken links = 0, errors = 0, warn = 2, info = 0</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 80, warn = 3, info = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>1</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_input_resources_CapabilityStatement-food-allergy"><b>/github/workspace/input/resources/CapabilityStatement-food-allergy</b></a></td><td><b>79</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -54,13 +57,508 @@
    <tr style="background-color: #ffebcc">
      <td><b>ImplementationGuide.id</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide Resource id should be example.fhir.uv.food-allergy</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource CapabilityStatement/food-allergy.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource AllergyIntolerance/MyPeanutAllergy.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_input_resources_CapabilityStatement-food-allergy"> </a>
+<h2><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></h2>
+ <ul style="font-size: 7px"><li>CapabilityStatement: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/capabilitystatement.html">CapabilityStatement</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CapabilityStatement</b></td><td><b>warning</b></td><td title="cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[1].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[2].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[3].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[4].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[6].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[7].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[8].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[9].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[10].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[11].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[12].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[13].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[14].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[15].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[16].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[18].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[19].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[20].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[21].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[22].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[23].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[24].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[33].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[34].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[35].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[36].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[38].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[39].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[40].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[41].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[42].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[43].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].searchParam[44].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[0].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-validate' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[1].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[2].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta-add' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[3].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta-delete' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[4].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-convert' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[5].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-graphql' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[6].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-graph' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[7].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/activitydefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[8].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/activitydefinition-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[9].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-subset' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[10].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-implements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[11].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-conforms' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[12].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-versions' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[13].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/chargeitemdefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[14].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/claim-submit' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[15].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-lookup' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[16].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-validate-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[17].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-subsumes' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[18].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-find-matches' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[19].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/composition-document' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[20].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/conceptmap-translate' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[21].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/conceptmap-closure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[22].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/coverageeligibilityrequest-submit' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[23].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/encounter-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[24].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/group-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[25].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/library-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[26].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/list-find' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[27].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-evaluate-measure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[28].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[29].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-submit-data' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[30].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-collect-data' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[31].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-care-gaps' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[32].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/medicinalproduct-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[33].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/messageheader-process-message' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[34].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/namingsystem-preferred-id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[35].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/observation-stats' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[36].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/observation-lastn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[37].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/patient-match' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[38].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/patient-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[39].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/plandefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[40].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/plandefinition-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[41].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuredefinition-questionnaire' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[42].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuredefinition-snapshot' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[43].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuremap-transform' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[44].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/valueset-expand' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest[0].operation[45].definition</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/valueset-validate-code' does not resolve</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"> </a>
+<h2>TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-list' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-contained' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-containedType' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-validate' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta-add' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-meta-delete' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-convert' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-graphql' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/resource-graph' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/activitydefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/activitydefinition-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-subset' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-implements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-conforms' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/capabilitystatement-versions' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/chargeitemdefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/claim-submit' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-lookup' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-validate-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-subsumes' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/codesystem-find-matches' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/composition-document' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/conceptmap-translate' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/conceptmap-closure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/coverageeligibilityrequest-submit' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/encounter-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/group-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/library-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/list-find' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-evaluate-measure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-submit-data' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-collect-data' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/measure-care-gaps' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/medicinalproduct-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/messageheader-process-message' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/namingsystem-preferred-id' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/observation-stats' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/observation-lastn' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/patient-match' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/patient-everything' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/plandefinition-apply' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/plandefinition-data-requirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuredefinition-questionnaire' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuredefinition-snapshot' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/structuremap-transform' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/valueset-expand' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CapabilityStatement-food-allergy.html">/github/workspace/input/resources/CapabilityStatement-food-allergy</a></td><td><b>Canonical URL 'http://hl7.org/fhir/OperationDefinition/valueset-validate-code' does not resolve</b></td>
+   </tr>
+</table>
 </body>
 </html>
