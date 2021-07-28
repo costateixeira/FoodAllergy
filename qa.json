@@ -3,9 +3,9 @@
   "name": "FoodAllergyIG",
   "package-id": "example.fhir.uv.food-allergy",
   "ig-ver": "0.1.0-test",
-  "date": "Wed, 28 Jul, 2021 07:56:56 +0000",
-  "errs": 0,
-  "warnings": 2,
+  "date": "Wed, 28 Jul, 2021 07:59:44 +0000",
+  "errs": 80,
+  "warnings": 3,
   "hints": 0,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"

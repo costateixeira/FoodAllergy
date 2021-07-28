@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="food-allergy"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">!-- Snipped for Brevity --&gt;</div>
+  </text>
+  <url value="http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy"/>
+  <version value="0.1.0-test"/>
+  <name value="Base FHIR Capability Statement"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
+  <publisher value="Quality of Life Workgroup"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/committees/qualityoflife"/>
+    </telecom>
+  </contact>
+  <description value="This is the base Capability Statement for FHIR. It represents a server that provides the full set of functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <kind value="capability"/>
+  <software>
+    <name value="Insert your software name here..."/>
+  </software>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="All the functionality defined in FHIR"/>
+    <security>
+      <cors value="true"/>
+      <service>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/restful-security-service"/>
+          <code value="SMART-on-FHIR"/>
+          <display value="SMART-on-FHIR"/>
+        </coding>
+        <text value="See http://docs.smarthealthit.org/"/>
+      </service>
+      <description value="This is the Capability Statement to declare that the server supports SMART-on-FHIR. See the SMART-on-FHIR docs for the extension that would go with such a server"/>
+    </security>
+    <resource>
+      <type value="AllergyIntolerance"/>
+      <profile value="http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy"/>
+      <interaction>
+        <code value="read"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="create"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+        <documentation value="Implemented per the specification (or Insert other doco here)"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="AllergyIntolerance.recorder"/>
+      <searchInclude value="AllergyIntolerance.asserter"/>
+      <searchInclude value="AllergyIntolerance.patient"/>
+      <searchRevInclude value="ClinicalImpression.problem"/>
+      <searchParam>
+        <name value="severity"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-severity"/>
+        <type value="token"/>
+        <documentation value="mild | moderate | severe (of event as a whole)"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+        <documentation value="Date first version of the resource instance was recorded"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
+        <type value="token"/>
+        <documentation value="External ids for this item"/>
+      </searchParam>
+      <searchParam>
+        <name value="manifestation"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-manifestation"/>
+        <type value="token"/>
+        <documentation value="Clinical symptoms/signs associated with the Event"/>
+      </searchParam>
+      <searchParam>
+        <name value="recorder"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-recorder"/>
+        <type value="reference"/>
+        <documentation value="Who recorded the sensitivity"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+        <documentation value="Code that identifies the allergy or intolerance"/>
+      </searchParam>
+      <searchParam>
+        <name value="verification-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status"/>
+        <type value="token"/>
+        <documentation value="unconfirmed | confirmed | refuted | entered-in-error"/>
+      </searchParam>
+      <searchParam>
+        <name value="criticality"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality"/>
+        <type value="token"/>
+        <documentation value="low | high | unable-to-assess"/>
+      </searchParam>
+      <searchParam>
+        <name value="clinical-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"/>
+        <type value="token"/>
+        <documentation value="active | inactive | resolved"/>
+      </searchParam>
+      <searchParam>
+        <name value="type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
+        <type value="token"/>
+        <documentation value="allergy | intolerance - Underlying mechanism (if known)"/>
+      </searchParam>
+      <searchParam>
+        <name value="onset"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset"/>
+        <type value="date"/>
+        <documentation value="Date(/time) when manifestations showed"/>
+      </searchParam>
+      <searchParam>
+        <name value="route"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-route"/>
+        <type value="token"/>
+        <documentation value="How the subject was exposed to the substance"/>
+      </searchParam>
+      <searchParam>
+        <name value="asserter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-asserter"/>
+        <type value="reference"/>
+        <documentation value="Source of the information about the allergy"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Who the sensitivity is for"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-category"/>
+        <type value="token"/>
+        <documentation value="food | medication | environment | biologic"/>
+      </searchParam>
+      <searchParam>
+        <name value="last-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date"/>
+        <type value="date"/>
+        <documentation value="Date(/time) of last known occurrence of a reaction"/>
+      </searchParam>
+    </resource>
+    <interaction>
+      <code value="transaction"/>
+      <documentation value="Implemented per the specification (or Insert other doco here)"/>
+    </interaction>
+    <interaction>
+      <code value="batch"/>
+      <documentation value="Implemented per the specification (or Insert other doco here)"/>
+    </interaction>
+    <interaction>
+      <code value="history-system"/>
+      <documentation value="Implemented per the specification (or Insert other doco here)"/>
+    </interaction>
+    <interaction>
+      <code value="search-system"/>
+      <documentation value="Implemented per the specification (or Insert other doco here)"/>
+    </interaction>
+    <searchParam>
+      <name value="_text"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/DomainResource-text"/>
+      <type value="string"/>
+      <documentation value="Search on the narrative of the resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="something"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/id"/>
+      <type value="string"/>
+      <documentation value="some doco"/>
+    </searchParam>
+    <searchParam>
+      <name value="_list"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-list"/>
+      <type value="token"/>
+      <documentation value="Retrieval of resources that are referenced by a List resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="_has"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-has"/>
+      <type value="composite"/>
+      <documentation value="Provides support for reverse chaining"/>
+    </searchParam>
+    <searchParam>
+      <name value="_type"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-type"/>
+      <type value="token"/>
+      <documentation value="Type of resource (when doing cross-resource search"/>
+    </searchParam>
+    <searchParam>
+      <name value="_sort"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-source"/>
+      <type value="token"/>
+      <documentation value="How to sort the resources when returning"/>
+    </searchParam>
+    <searchParam>
+      <name value="_count"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-count"/>
+      <type value="number"/>
+      <documentation value="How many resources to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_include"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-include"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_revinclude"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-revinclude"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_summary"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-summary"/>
+      <type value="token"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_elements"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-elements"/>
+      <type value="string"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_contained"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-contained"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <searchParam>
+      <name value="_containedType"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-containedType"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <searchParam>
+      <name value="something"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/id"/>
+      <type value="string"/>
+      <documentation value="some doco"/>
+    </searchParam>
+    <searchParam>
+      <name value="_list"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-list"/>
+      <type value="token"/>
+      <documentation value="Retrieval of resources that are referenced by a List resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="_has"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-has"/>
+      <type value="composite"/>
+      <documentation value="Provides support for reverse chaining"/>
+    </searchParam>
+    <searchParam>
+      <name value="_type"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-type"/>
+      <type value="token"/>
+      <documentation value="Type of resource (when doing cross-resource search"/>
+    </searchParam>
+    <searchParam>
+      <name value="_sort"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-source"/>
+      <type value="token"/>
+      <documentation value="How to sort the resources when returning"/>
+    </searchParam>
+    <searchParam>
+      <name value="_count"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-count"/>
+      <type value="number"/>
+      <documentation value="How many resources to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_include"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-include"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_revinclude"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-revinclude"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_summary"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-summary"/>
+      <type value="token"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_elements"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-elements"/>
+      <type value="string"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_contained"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-contained"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <searchParam>
+      <name value="_containedType"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-containedType"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <searchParam>
+      <name value="_query"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-query"/>
+      <type value="token"/>
+      <documentation value="A custom search profile that describes a specific defined query operation"/>
+    </searchParam>
+    <searchParam>
+      <name value="_profile"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+      <type value="uri"/>
+      <documentation value="Profiles this resource claims to conform to"/>
+    </searchParam>
+    <searchParam>
+      <name value="_lastUpdated"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+      <type value="date"/>
+      <documentation value="When the resource version last changed"/>
+    </searchParam>
+    <searchParam>
+      <name value="_tag"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-tag"/>
+      <type value="token"/>
+      <documentation value="Tags applied to this resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="_security"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-security"/>
+      <type value="token"/>
+      <documentation value="Security Labels applied to this resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="_source"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-source"/>
+      <type value="uri"/>
+      <documentation value="Identifies where the resource comes from"/>
+    </searchParam>
+    <searchParam>
+      <name value="_id"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+      <type value="token"/>
+      <documentation value="Logical id of this artifact"/>
+    </searchParam>
+    <searchParam>
+      <name value="_content"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-content"/>
+      <type value="string"/>
+      <documentation value="Search on the entire content of the resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="something"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/id"/>
+      <type value="string"/>
+      <documentation value="some doco"/>
+    </searchParam>
+    <searchParam>
+      <name value="_list"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-list"/>
+      <type value="token"/>
+      <documentation value="Retrieval of resources that are referenced by a List resource"/>
+    </searchParam>
+    <searchParam>
+      <name value="_has"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-has"/>
+      <type value="composite"/>
+      <documentation value="Provides support for reverse chaining"/>
+    </searchParam>
+    <searchParam>
+      <name value="_type"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-type"/>
+      <type value="token"/>
+      <documentation value="Type of resource (when doing cross-resource search"/>
+    </searchParam>
+    <searchParam>
+      <name value="_sort"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-source"/>
+      <type value="token"/>
+      <documentation value="How to sort the resources when returning"/>
+    </searchParam>
+    <searchParam>
+      <name value="_count"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-count"/>
+      <type value="number"/>
+      <documentation value="How many resources to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_include"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-include"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_revinclude"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-revinclude"/>
+      <type value="token"/>
+      <documentation value="Control over returning additional resources (see spec)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_summary"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-summary"/>
+      <type value="token"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_elements"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-elements"/>
+      <type value="string"/>
+      <documentation value="What kind of information to return"/>
+    </searchParam>
+    <searchParam>
+      <name value="_contained"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-contained"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <searchParam>
+      <name value="_containedType"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-containedType"/>
+      <type value="token"/>
+      <documentation value="Managing search into contained resources"/>
+    </searchParam>
+    <operation>
+      <name value="validate"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-validate"/>
+    </operation>
+    <operation>
+      <name value="meta"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-meta"/>
+    </operation>
+    <operation>
+      <name value="meta-add"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-meta-add"/>
+    </operation>
+    <operation>
+      <name value="meta-delete"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-meta-delete"/>
+    </operation>
+    <operation>
+      <name value="convert"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-convert"/>
+    </operation>
+    <operation>
+      <name value="graphql"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-graphql"/>
+    </operation>
+    <operation>
+      <name value="graph"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/resource-graph"/>
+    </operation>
+    <operation>
+      <name value="apply"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/activitydefinition-apply"/>
+    </operation>
+    <operation>
+      <name value="data-requirements"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/activitydefinition-data-requirements"/>
+    </operation>
+    <operation>
+      <name value="subset"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/capabilitystatement-subset"/>
+    </operation>
+    <operation>
+      <name value="implements"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/capabilitystatement-implements"/>
+    </operation>
+    <operation>
+      <name value="conforms"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/capabilitystatement-conforms"/>
+    </operation>
+    <operation>
+      <name value="versions"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/capabilitystatement-versions"/>
+    </operation>
+    <operation>
+      <name value="apply"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/chargeitemdefinition-apply"/>
+    </operation>
+    <operation>
+      <name value="submit"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/claim-submit"/>
+    </operation>
+    <operation>
+      <name value="lookup"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/codesystem-lookup"/>
+    </operation>
+    <operation>
+      <name value="validate-code"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/codesystem-validate-code"/>
+    </operation>
+    <operation>
+      <name value="subsumes"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/codesystem-subsumes"/>
+    </operation>
+    <operation>
+      <name value="find-matches"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/codesystem-find-matches"/>
+    </operation>
+    <operation>
+      <name value="document"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/composition-document"/>
+    </operation>
+    <operation>
+      <name value="translate"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/conceptmap-translate"/>
+    </operation>
+    <operation>
+      <name value="closure"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/conceptmap-closure"/>
+    </operation>
+    <operation>
+      <name value="submit"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/coverageeligibilityrequest-submit"/>
+    </operation>
+    <operation>
+      <name value="everything"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/encounter-everything"/>
+    </operation>
+    <operation>
+      <name value="everything"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/group-everything"/>
+    </operation>
+    <operation>
+      <name value="data-requirements"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/library-data-requirements"/>
+    </operation>
+    <operation>
+      <name value="find"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/list-find"/>
+    </operation>
+    <operation>
+      <name value="evaluate-measure"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/measure-evaluate-measure"/>
+    </operation>
+    <operation>
+      <name value="data-requirements"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/measure-data-requirements"/>
+    </operation>
+    <operation>
+      <name value="submit-data"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/measure-submit-data"/>
+    </operation>
+    <operation>
+      <name value="collect-data"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/measure-collect-data"/>
+    </operation>
+    <operation>
+      <name value="care-gaps"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/measure-care-gaps"/>
+    </operation>
+    <operation>
+      <name value="everything"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/medicinalproduct-everything"/>
+    </operation>
+    <operation>
+      <name value="process-message"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/messageheader-process-message"/>
+    </operation>
+    <operation>
+      <name value="preferred-id"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/namingsystem-preferred-id"/>
+    </operation>
+    <operation>
+      <name value="stats"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/observation-stats"/>
+    </operation>
+    <operation>
+      <name value="lastn"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/observation-lastn"/>
+    </operation>
+    <operation>
+      <name value="match"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/patient-match"/>
+    </operation>
+    <operation>
+      <name value="everything"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/patient-everything"/>
+    </operation>
+    <operation>
+      <name value="apply"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/plandefinition-apply"/>
+    </operation>
+    <operation>
+      <name value="data-requirements"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/plandefinition-data-requirements"/>
+    </operation>
+    <operation>
+      <name value="questionnaire"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/structuredefinition-questionnaire"/>
+    </operation>
+    <operation>
+      <name value="snapshot"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/structuredefinition-snapshot"/>
+    </operation>
+    <operation>
+      <name value="transform"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/structuremap-transform"/>
+    </operation>
+    <operation>
+      <name value="expand"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/valueset-expand"/>
+    </operation>
+    <operation>
+      <name value="validate-code"/>
+      <definition value="http://hl7.org/fhir/OperationDefinition/valueset-validate-code"/>
+    </operation>
+  </rest>
+</CapabilityStatement>

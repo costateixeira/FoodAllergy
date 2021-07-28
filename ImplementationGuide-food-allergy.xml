@@ -12,7 +12,7 @@
   <title value="Food Allergy Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-28T07:56:56+00:00"/>
+  <date value="2021-07-28T07:59:44+00:00"/>
   <publisher value="Quality of Life Workgroup"/>
   <contact>
     <telecom>
@@ -207,6 +207,15 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/food-allergy"/>
+      </reference>
+      <description value="This is the base Capability Statement for FHIR. It represents a server that provides the full set of functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
