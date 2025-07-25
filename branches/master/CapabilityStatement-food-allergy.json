@@ -1,696 +1,662 @@
 {
-  "resourceType": "CapabilityStatement",
-  "id": "food-allergy",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">!-- Snipped for Brevity --&gt;</div>"
+  "resourceType" : "CapabilityStatement",
+  "id" : "food-allergy",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">!-- Snipped for Brevity --&gt;</div>"
   },
-  "url": "http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy",
-  "version": "0.1.0-test",
-  "name": "Base FHIR Capability Statement",
-  "status": "draft",
-  "experimental": true,
-  "date": "2019-11-01T09:29:23+11:00",
-  "publisher": "Quality of Life Workgroup",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://example.org/committees/qualityoflife"
-        }
-      ]
-    }
-  ],
-  "description": "This is the base Capability Statement for FHIR. It represents a server that provides the full set of functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001"
-        }
-      ]
-    }
-  ],
-  "kind": "capability",
-  "software": {
-    "name": "Insert your software name here..."
+  "url" : "http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy",
+  "version" : "0.1.0-test",
+  "name" : "Base FHIR Capability Statement",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2019-11-01T09:29:23+11:00",
+  "publisher" : "Quality of Life Workgroup",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/committees/qualityoflife"
+    }]
+  }],
+  "description" : "This is the base Capability Statement for FHIR. It represents a server that provides the full set of functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "kind" : "capability",
+  "software" : {
+    "name" : "Insert your software name here..."
   },
-  "fhirVersion": "4.0.1",
-  "format": [
-    "xml",
-    "json"
-  ],
-  "rest": [
-    {
-      "mode": "server",
-      "documentation": "All the functionality defined in FHIR",
-      "security": {
-        "cors": true,
-        "service": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
-                "code": "SMART-on-FHIR",
-                "display": "SMART-on-FHIR"
-              }
-            ],
-            "text": "See http://docs.smarthealthit.org/"
-          }
-        ],
-        "description": "This is the Capability Statement to declare that the server supports SMART-on-FHIR. See the SMART-on-FHIR docs for the extension that would go with such a server"
+  "fhirVersion" : "4.0.1",
+  "format" : ["xml",
+  "json"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "All the functionality defined in FHIR",
+    "security" : {
+      "cors" : true,
+      "service" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+          "code" : "SMART-on-FHIR",
+          "display" : "SMART-on-FHIR"
+        }],
+        "text" : "See http://docs.smarthealthit.org/"
+      }],
+      "description" : "This is the Capability Statement to declare that the server supports SMART-on-FHIR. See the SMART-on-FHIR docs for the extension that would go with such a server"
+    },
+    "resource" : [{
+      "type" : "AllergyIntolerance",
+      "profile" : "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy",
+      "interaction" : [{
+        "code" : "read",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
       },
-      "resource": [
-        {
-          "type": "AllergyIntolerance",
-          "profile": "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy",
-          "interaction": [
-            {
-              "code": "read",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "vread",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "update",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "delete",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "history-instance",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "history-type",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "create",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            },
-            {
-              "code": "search-type",
-              "documentation": "Implemented per the specification (or Insert other doco here)"
-            }
-          ],
-          "conditionalCreate": true,
-          "conditionalUpdate": true,
-          "conditionalDelete": "multiple",
-          "referencePolicy": [
-            "literal",
-            "logical"
-          ],
-          "searchInclude": [
-            "AllergyIntolerance.recorder",
-            "AllergyIntolerance.asserter",
-            "AllergyIntolerance.patient"
-          ],
-          "searchRevInclude": [
-            "ClinicalImpression.problem"
-          ],
-          "searchParam": [
-            {
-              "name": "severity",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-severity",
-              "type": "token",
-              "documentation": "mild | moderate | severe (of event as a whole)"
-            },
-            {
-              "name": "date",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
-              "type": "date",
-              "documentation": "Date first version of the resource instance was recorded"
-            },
-            {
-              "name": "identifier",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
-              "type": "token",
-              "documentation": "External ids for this item"
-            },
-            {
-              "name": "manifestation",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-manifestation",
-              "type": "token",
-              "documentation": "Clinical symptoms/signs associated with the Event"
-            },
-            {
-              "name": "recorder",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-recorder",
-              "type": "reference",
-              "documentation": "Who recorded the sensitivity"
-            },
-            {
-              "name": "code",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-code",
-              "type": "token",
-              "documentation": "Code that identifies the allergy or intolerance"
-            },
-            {
-              "name": "verification-status",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status",
-              "type": "token",
-              "documentation": "unconfirmed | confirmed | refuted | entered-in-error"
-            },
-            {
-              "name": "criticality",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality",
-              "type": "token",
-              "documentation": "low | high | unable-to-assess"
-            },
-            {
-              "name": "clinical-status",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status",
-              "type": "token",
-              "documentation": "active | inactive | resolved"
-            },
-            {
-              "name": "type",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-type",
-              "type": "token",
-              "documentation": "allergy | intolerance - Underlying mechanism (if known)"
-            },
-            {
-              "name": "onset",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset",
-              "type": "date",
-              "documentation": "Date(/time) when manifestations showed"
-            },
-            {
-              "name": "route",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-route",
-              "type": "token",
-              "documentation": "How the subject was exposed to the substance"
-            },
-            {
-              "name": "asserter",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-asserter",
-              "type": "reference",
-              "documentation": "Source of the information about the allergy"
-            },
-            {
-              "name": "patient",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
-              "type": "reference",
-              "documentation": "Who the sensitivity is for"
-            },
-            {
-              "name": "category",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-category",
-              "type": "token",
-              "documentation": "food | medication | environment | biologic"
-            },
-            {
-              "name": "last-date",
-              "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date",
-              "type": "date",
-              "documentation": "Date(/time) of last known occurrence of a reaction"
-            }
-          ]
-        }
-      ],
-      "interaction": [
-        {
-          "code": "transaction",
-          "documentation": "Implemented per the specification (or Insert other doco here)"
-        },
-        {
-          "code": "batch",
-          "documentation": "Implemented per the specification (or Insert other doco here)"
-        },
-        {
-          "code": "history-system",
-          "documentation": "Implemented per the specification (or Insert other doco here)"
-        },
-        {
-          "code": "search-system",
-          "documentation": "Implemented per the specification (or Insert other doco here)"
-        }
-      ],
-      "searchParam": [
-        {
-          "name": "_text",
-          "definition": "http://hl7.org/fhir/SearchParameter/DomainResource-text",
-          "type": "string",
-          "documentation": "Search on the narrative of the resource"
-        },
-        {
-          "name": "something",
-          "definition": "http://hl7.org/fhir/SearchParameter/id",
-          "type": "string",
-          "documentation": "some doco"
-        },
-        {
-          "name": "_list",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-list",
-          "type": "token",
-          "documentation": "Retrieval of resources that are referenced by a List resource"
-        },
-        {
-          "name": "_has",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-has",
-          "type": "composite",
-          "documentation": "Provides support for reverse chaining"
-        },
-        {
-          "name": "_type",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-type",
-          "type": "token",
-          "documentation": "Type of resource (when doing cross-resource search"
-        },
-        {
-          "name": "_sort",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-source",
-          "type": "token",
-          "documentation": "How to sort the resources when returning"
-        },
-        {
-          "name": "_count",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-count",
-          "type": "number",
-          "documentation": "How many resources to return"
-        },
-        {
-          "name": "_include",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-include",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_revinclude",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_summary",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-summary",
-          "type": "token",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_elements",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-elements",
-          "type": "string",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_contained",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-contained",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        },
-        {
-          "name": "_containedType",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-containedType",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        },
-        {
-          "name": "something",
-          "definition": "http://hl7.org/fhir/SearchParameter/id",
-          "type": "string",
-          "documentation": "some doco"
-        },
-        {
-          "name": "_list",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-list",
-          "type": "token",
-          "documentation": "Retrieval of resources that are referenced by a List resource"
-        },
-        {
-          "name": "_has",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-has",
-          "type": "composite",
-          "documentation": "Provides support for reverse chaining"
-        },
-        {
-          "name": "_type",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-type",
-          "type": "token",
-          "documentation": "Type of resource (when doing cross-resource search"
-        },
-        {
-          "name": "_sort",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-source",
-          "type": "token",
-          "documentation": "How to sort the resources when returning"
-        },
-        {
-          "name": "_count",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-count",
-          "type": "number",
-          "documentation": "How many resources to return"
-        },
-        {
-          "name": "_include",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-include",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_revinclude",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_summary",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-summary",
-          "type": "token",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_elements",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-elements",
-          "type": "string",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_contained",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-contained",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        },
-        {
-          "name": "_containedType",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-containedType",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        },
-        {
-          "name": "_query",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-query",
-          "type": "token",
-          "documentation": "A custom search profile that describes a specific defined query operation"
-        },
-        {
-          "name": "_profile",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
-          "type": "uri",
-          "documentation": "Profiles this resource claims to conform to"
-        },
-        {
-          "name": "_lastUpdated",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
-          "type": "date",
-          "documentation": "When the resource version last changed"
-        },
-        {
-          "name": "_tag",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
-          "type": "token",
-          "documentation": "Tags applied to this resource"
-        },
-        {
-          "name": "_security",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-security",
-          "type": "token",
-          "documentation": "Security Labels applied to this resource"
-        },
-        {
-          "name": "_source",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-source",
-          "type": "uri",
-          "documentation": "Identifies where the resource comes from"
-        },
-        {
-          "name": "_id",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-          "type": "token",
-          "documentation": "Logical id of this artifact"
-        },
-        {
-          "name": "_content",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-content",
-          "type": "string",
-          "documentation": "Search on the entire content of the resource"
-        },
-        {
-          "name": "something",
-          "definition": "http://hl7.org/fhir/SearchParameter/id",
-          "type": "string",
-          "documentation": "some doco"
-        },
-        {
-          "name": "_list",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-list",
-          "type": "token",
-          "documentation": "Retrieval of resources that are referenced by a List resource"
-        },
-        {
-          "name": "_has",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-has",
-          "type": "composite",
-          "documentation": "Provides support for reverse chaining"
-        },
-        {
-          "name": "_type",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-type",
-          "type": "token",
-          "documentation": "Type of resource (when doing cross-resource search"
-        },
-        {
-          "name": "_sort",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-source",
-          "type": "token",
-          "documentation": "How to sort the resources when returning"
-        },
-        {
-          "name": "_count",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-count",
-          "type": "number",
-          "documentation": "How many resources to return"
-        },
-        {
-          "name": "_include",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-include",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_revinclude",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
-          "type": "token",
-          "documentation": "Control over returning additional resources (see spec)"
-        },
-        {
-          "name": "_summary",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-summary",
-          "type": "token",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_elements",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-elements",
-          "type": "string",
-          "documentation": "What kind of information to return"
-        },
-        {
-          "name": "_contained",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-contained",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        },
-        {
-          "name": "_containedType",
-          "definition": "http://hl7.org/fhir/SearchParameter/Resource-containedType",
-          "type": "token",
-          "documentation": "Managing search into contained resources"
-        }
-      ],
-      "operation": [
-        {
-          "name": "validate",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-validate"
-        },
-        {
-          "name": "meta",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-meta"
-        },
-        {
-          "name": "meta-add",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-meta-add"
-        },
-        {
-          "name": "meta-delete",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-meta-delete"
-        },
-        {
-          "name": "convert",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-convert"
-        },
-        {
-          "name": "graphql",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-graphql"
-        },
-        {
-          "name": "graph",
-          "definition": "http://hl7.org/fhir/OperationDefinition/resource-graph"
-        },
-        {
-          "name": "apply",
-          "definition": "http://hl7.org/fhir/OperationDefinition/activitydefinition-apply"
-        },
-        {
-          "name": "data-requirements",
-          "definition": "http://hl7.org/fhir/OperationDefinition/activitydefinition-data-requirements"
-        },
-        {
-          "name": "subset",
-          "definition": "http://hl7.org/fhir/OperationDefinition/capabilitystatement-subset"
-        },
-        {
-          "name": "implements",
-          "definition": "http://hl7.org/fhir/OperationDefinition/capabilitystatement-implements"
-        },
-        {
-          "name": "conforms",
-          "definition": "http://hl7.org/fhir/OperationDefinition/capabilitystatement-conforms"
-        },
-        {
-          "name": "versions",
-          "definition": "http://hl7.org/fhir/OperationDefinition/capabilitystatement-versions"
-        },
-        {
-          "name": "apply",
-          "definition": "http://hl7.org/fhir/OperationDefinition/chargeitemdefinition-apply"
-        },
-        {
-          "name": "submit",
-          "definition": "http://hl7.org/fhir/OperationDefinition/claim-submit"
-        },
-        {
-          "name": "lookup",
-          "definition": "http://hl7.org/fhir/OperationDefinition/codesystem-lookup"
-        },
-        {
-          "name": "validate-code",
-          "definition": "http://hl7.org/fhir/OperationDefinition/codesystem-validate-code"
-        },
-        {
-          "name": "subsumes",
-          "definition": "http://hl7.org/fhir/OperationDefinition/codesystem-subsumes"
-        },
-        {
-          "name": "find-matches",
-          "definition": "http://hl7.org/fhir/OperationDefinition/codesystem-find-matches"
-        },
-        {
-          "name": "document",
-          "definition": "http://hl7.org/fhir/OperationDefinition/composition-document"
-        },
-        {
-          "name": "translate",
-          "definition": "http://hl7.org/fhir/OperationDefinition/conceptmap-translate"
-        },
-        {
-          "name": "closure",
-          "definition": "http://hl7.org/fhir/OperationDefinition/conceptmap-closure"
-        },
-        {
-          "name": "submit",
-          "definition": "http://hl7.org/fhir/OperationDefinition/coverageeligibilityrequest-submit"
-        },
-        {
-          "name": "everything",
-          "definition": "http://hl7.org/fhir/OperationDefinition/encounter-everything"
-        },
-        {
-          "name": "everything",
-          "definition": "http://hl7.org/fhir/OperationDefinition/group-everything"
-        },
-        {
-          "name": "data-requirements",
-          "definition": "http://hl7.org/fhir/OperationDefinition/library-data-requirements"
-        },
-        {
-          "name": "find",
-          "definition": "http://hl7.org/fhir/OperationDefinition/list-find"
-        },
-        {
-          "name": "evaluate-measure",
-          "definition": "http://hl7.org/fhir/OperationDefinition/measure-evaluate-measure"
-        },
-        {
-          "name": "data-requirements",
-          "definition": "http://hl7.org/fhir/OperationDefinition/measure-data-requirements"
-        },
-        {
-          "name": "submit-data",
-          "definition": "http://hl7.org/fhir/OperationDefinition/measure-submit-data"
-        },
-        {
-          "name": "collect-data",
-          "definition": "http://hl7.org/fhir/OperationDefinition/measure-collect-data"
-        },
-        {
-          "name": "care-gaps",
-          "definition": "http://hl7.org/fhir/OperationDefinition/measure-care-gaps"
-        },
-        {
-          "name": "everything",
-          "definition": "http://hl7.org/fhir/OperationDefinition/medicinalproduct-everything"
-        },
-        {
-          "name": "process-message",
-          "definition": "http://hl7.org/fhir/OperationDefinition/messageheader-process-message"
-        },
-        {
-          "name": "preferred-id",
-          "definition": "http://hl7.org/fhir/OperationDefinition/namingsystem-preferred-id"
-        },
-        {
-          "name": "stats",
-          "definition": "http://hl7.org/fhir/OperationDefinition/observation-stats"
-        },
-        {
-          "name": "lastn",
-          "definition": "http://hl7.org/fhir/OperationDefinition/observation-lastn"
-        },
-        {
-          "name": "match",
-          "definition": "http://hl7.org/fhir/OperationDefinition/patient-match"
-        },
-        {
-          "name": "everything",
-          "definition": "http://hl7.org/fhir/OperationDefinition/patient-everything"
-        },
-        {
-          "name": "apply",
-          "definition": "http://hl7.org/fhir/OperationDefinition/plandefinition-apply"
-        },
-        {
-          "name": "data-requirements",
-          "definition": "http://hl7.org/fhir/OperationDefinition/plandefinition-data-requirements"
-        },
-        {
-          "name": "questionnaire",
-          "definition": "http://hl7.org/fhir/OperationDefinition/structuredefinition-questionnaire"
-        },
-        {
-          "name": "snapshot",
-          "definition": "http://hl7.org/fhir/OperationDefinition/structuredefinition-snapshot"
-        },
-        {
-          "name": "transform",
-          "definition": "http://hl7.org/fhir/OperationDefinition/structuremap-transform"
-        },
-        {
-          "name": "expand",
-          "definition": "http://hl7.org/fhir/OperationDefinition/valueset-expand"
-        },
-        {
-          "name": "validate-code",
-          "definition": "http://hl7.org/fhir/OperationDefinition/valueset-validate-code"
-        }
-      ]
-    }
-  ]
+      {
+        "code" : "vread",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "update",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "delete",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "history-instance",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "history-type",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "create",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "search-type",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["AllergyIntolerance.recorder",
+      "AllergyIntolerance.asserter",
+      "AllergyIntolerance.patient"],
+      "searchRevInclude" : ["ClinicalImpression.problem"],
+      "searchParam" : [{
+        "name" : "severity",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-severity",
+        "type" : "token",
+        "documentation" : "mild | moderate | severe (of event as a whole)"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date",
+        "documentation" : "Date first version of the resource instance was recorded"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+        "type" : "token",
+        "documentation" : "External ids for this item"
+      },
+      {
+        "name" : "manifestation",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-manifestation",
+        "type" : "token",
+        "documentation" : "Clinical symptoms/signs associated with the Event"
+      },
+      {
+        "name" : "recorder",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-recorder",
+        "type" : "reference",
+        "documentation" : "Who recorded the sensitivity"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token",
+        "documentation" : "Code that identifies the allergy or intolerance"
+      },
+      {
+        "name" : "verification-status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status",
+        "type" : "token",
+        "documentation" : "unconfirmed | confirmed | refuted | entered-in-error"
+      },
+      {
+        "name" : "criticality",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality",
+        "type" : "token",
+        "documentation" : "low | high | unable-to-assess"
+      },
+      {
+        "name" : "clinical-status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status",
+        "type" : "token",
+        "documentation" : "active | inactive | resolved"
+      },
+      {
+        "name" : "type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-type",
+        "type" : "token",
+        "documentation" : "allergy | intolerance - Underlying mechanism (if known)"
+      },
+      {
+        "name" : "onset",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset",
+        "type" : "date",
+        "documentation" : "Date(/time) when manifestations showed"
+      },
+      {
+        "name" : "route",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-route",
+        "type" : "token",
+        "documentation" : "How the subject was exposed to the substance"
+      },
+      {
+        "name" : "asserter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-asserter",
+        "type" : "reference",
+        "documentation" : "Source of the information about the allergy"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference",
+        "documentation" : "Who the sensitivity is for"
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-category",
+        "type" : "token",
+        "documentation" : "food | medication | environment | biologic"
+      },
+      {
+        "name" : "last-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date",
+        "type" : "date",
+        "documentation" : "Date(/time) of last known occurrence of a reaction"
+      }]
+    }],
+    "interaction" : [{
+      "code" : "transaction",
+      "documentation" : "Implemented per the specification (or Insert other doco here)"
+    },
+    {
+      "code" : "batch",
+      "documentation" : "Implemented per the specification (or Insert other doco here)"
+    },
+    {
+      "code" : "history-system",
+      "documentation" : "Implemented per the specification (or Insert other doco here)"
+    },
+    {
+      "code" : "search-system",
+      "documentation" : "Implemented per the specification (or Insert other doco here)"
+    }],
+    "searchParam" : [{
+      "name" : "_text",
+      "definition" : "http://hl7.org/fhir/SearchParameter/DomainResource-text",
+      "type" : "string",
+      "documentation" : "Search on the narrative of the resource"
+    },
+    {
+      "name" : "something",
+      "definition" : "http://hl7.org/fhir/SearchParameter/id",
+      "type" : "string",
+      "documentation" : "some doco"
+    },
+    {
+      "name" : "_list",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-list",
+      "type" : "token",
+      "documentation" : "Retrieval of resources that are referenced by a List resource"
+    },
+    {
+      "name" : "_has",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-has",
+      "type" : "composite",
+      "documentation" : "Provides support for reverse chaining"
+    },
+    {
+      "name" : "_type",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-type",
+      "type" : "token",
+      "documentation" : "Type of resource (when doing cross-resource search"
+    },
+    {
+      "name" : "_sort",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-source",
+      "type" : "token",
+      "documentation" : "How to sort the resources when returning"
+    },
+    {
+      "name" : "_count",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-count",
+      "type" : "number",
+      "documentation" : "How many resources to return"
+    },
+    {
+      "name" : "_include",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-include",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_revinclude",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_summary",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-summary",
+      "type" : "token",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_elements",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-elements",
+      "type" : "string",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_contained",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-contained",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    },
+    {
+      "name" : "_containedType",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-containedType",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    },
+    {
+      "name" : "something",
+      "definition" : "http://hl7.org/fhir/SearchParameter/id",
+      "type" : "string",
+      "documentation" : "some doco"
+    },
+    {
+      "name" : "_list",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-list",
+      "type" : "token",
+      "documentation" : "Retrieval of resources that are referenced by a List resource"
+    },
+    {
+      "name" : "_has",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-has",
+      "type" : "composite",
+      "documentation" : "Provides support for reverse chaining"
+    },
+    {
+      "name" : "_type",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-type",
+      "type" : "token",
+      "documentation" : "Type of resource (when doing cross-resource search"
+    },
+    {
+      "name" : "_sort",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-source",
+      "type" : "token",
+      "documentation" : "How to sort the resources when returning"
+    },
+    {
+      "name" : "_count",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-count",
+      "type" : "number",
+      "documentation" : "How many resources to return"
+    },
+    {
+      "name" : "_include",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-include",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_revinclude",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_summary",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-summary",
+      "type" : "token",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_elements",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-elements",
+      "type" : "string",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_contained",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-contained",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    },
+    {
+      "name" : "_containedType",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-containedType",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    },
+    {
+      "name" : "_query",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-query",
+      "type" : "token",
+      "documentation" : "A custom search profile that describes a specific defined query operation"
+    },
+    {
+      "name" : "_profile",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-profile",
+      "type" : "uri",
+      "documentation" : "Profiles this resource claims to conform to"
+    },
+    {
+      "name" : "_lastUpdated",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+      "type" : "date",
+      "documentation" : "When the resource version last changed"
+    },
+    {
+      "name" : "_tag",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-tag",
+      "type" : "token",
+      "documentation" : "Tags applied to this resource"
+    },
+    {
+      "name" : "_security",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-security",
+      "type" : "token",
+      "documentation" : "Security Labels applied to this resource"
+    },
+    {
+      "name" : "_source",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-source",
+      "type" : "uri",
+      "documentation" : "Identifies where the resource comes from"
+    },
+    {
+      "name" : "_id",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+      "type" : "token",
+      "documentation" : "Logical id of this artifact"
+    },
+    {
+      "name" : "_content",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-content",
+      "type" : "string",
+      "documentation" : "Search on the entire content of the resource"
+    },
+    {
+      "name" : "something",
+      "definition" : "http://hl7.org/fhir/SearchParameter/id",
+      "type" : "string",
+      "documentation" : "some doco"
+    },
+    {
+      "name" : "_list",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-list",
+      "type" : "token",
+      "documentation" : "Retrieval of resources that are referenced by a List resource"
+    },
+    {
+      "name" : "_has",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-has",
+      "type" : "composite",
+      "documentation" : "Provides support for reverse chaining"
+    },
+    {
+      "name" : "_type",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-type",
+      "type" : "token",
+      "documentation" : "Type of resource (when doing cross-resource search"
+    },
+    {
+      "name" : "_sort",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-source",
+      "type" : "token",
+      "documentation" : "How to sort the resources when returning"
+    },
+    {
+      "name" : "_count",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-count",
+      "type" : "number",
+      "documentation" : "How many resources to return"
+    },
+    {
+      "name" : "_include",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-include",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_revinclude",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
+      "type" : "token",
+      "documentation" : "Control over returning additional resources (see spec)"
+    },
+    {
+      "name" : "_summary",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-summary",
+      "type" : "token",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_elements",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-elements",
+      "type" : "string",
+      "documentation" : "What kind of information to return"
+    },
+    {
+      "name" : "_contained",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-contained",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    },
+    {
+      "name" : "_containedType",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-containedType",
+      "type" : "token",
+      "documentation" : "Managing search into contained resources"
+    }],
+    "operation" : [{
+      "name" : "validate",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-validate"
+    },
+    {
+      "name" : "meta",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-meta"
+    },
+    {
+      "name" : "meta-add",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-meta-add"
+    },
+    {
+      "name" : "meta-delete",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-meta-delete"
+    },
+    {
+      "name" : "convert",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-convert"
+    },
+    {
+      "name" : "graphql",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-graphql"
+    },
+    {
+      "name" : "graph",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/resource-graph"
+    },
+    {
+      "name" : "apply",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/activitydefinition-apply"
+    },
+    {
+      "name" : "data-requirements",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/activitydefinition-data-requirements"
+    },
+    {
+      "name" : "subset",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/capabilitystatement-subset"
+    },
+    {
+      "name" : "implements",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/capabilitystatement-implements"
+    },
+    {
+      "name" : "conforms",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/capabilitystatement-conforms"
+    },
+    {
+      "name" : "versions",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/capabilitystatement-versions"
+    },
+    {
+      "name" : "apply",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/chargeitemdefinition-apply"
+    },
+    {
+      "name" : "submit",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/claim-submit"
+    },
+    {
+      "name" : "lookup",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/codesystem-lookup"
+    },
+    {
+      "name" : "validate-code",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/codesystem-validate-code"
+    },
+    {
+      "name" : "subsumes",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/codesystem-subsumes"
+    },
+    {
+      "name" : "find-matches",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/codesystem-find-matches"
+    },
+    {
+      "name" : "document",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/composition-document"
+    },
+    {
+      "name" : "translate",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/conceptmap-translate"
+    },
+    {
+      "name" : "closure",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/conceptmap-closure"
+    },
+    {
+      "name" : "submit",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/coverageeligibilityrequest-submit"
+    },
+    {
+      "name" : "everything",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/encounter-everything"
+    },
+    {
+      "name" : "everything",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/group-everything"
+    },
+    {
+      "name" : "data-requirements",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/library-data-requirements"
+    },
+    {
+      "name" : "find",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/list-find"
+    },
+    {
+      "name" : "evaluate-measure",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/measure-evaluate-measure"
+    },
+    {
+      "name" : "data-requirements",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/measure-data-requirements"
+    },
+    {
+      "name" : "submit-data",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/measure-submit-data"
+    },
+    {
+      "name" : "collect-data",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/measure-collect-data"
+    },
+    {
+      "name" : "care-gaps",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/measure-care-gaps"
+    },
+    {
+      "name" : "everything",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/medicinalproduct-everything"
+    },
+    {
+      "name" : "process-message",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/messageheader-process-message"
+    },
+    {
+      "name" : "preferred-id",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/namingsystem-preferred-id"
+    },
+    {
+      "name" : "stats",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/observation-stats"
+    },
+    {
+      "name" : "lastn",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/observation-lastn"
+    },
+    {
+      "name" : "match",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/patient-match"
+    },
+    {
+      "name" : "everything",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/patient-everything"
+    },
+    {
+      "name" : "apply",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/plandefinition-apply"
+    },
+    {
+      "name" : "data-requirements",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/plandefinition-data-requirements"
+    },
+    {
+      "name" : "questionnaire",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/structuredefinition-questionnaire"
+    },
+    {
+      "name" : "snapshot",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/structuredefinition-snapshot"
+    },
+    {
+      "name" : "transform",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/structuremap-transform"
+    },
+    {
+      "name" : "expand",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/valueset-expand"
+    },
+    {
+      "name" : "validate-code",
+      "definition" : "http://hl7.org/fhir/OperationDefinition/valueset-validate-code"
+    }]
+  }]
 }
