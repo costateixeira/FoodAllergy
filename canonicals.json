@@ -1,37 +1,37 @@
 [
   {
-    "id": "food-allergy",
-    "type": "CapabilityStatement",
-    "url": "http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy",
-    "version": "0.1.0-test",
-    "name": "Base FHIR Capability Statement"
+    "id" : "food-allergy",
+    "type" : "CapabilityStatement",
+    "url" : "http://somewhere.org/fhir/myig/CapabilityStatement/food-allergy",
+    "version" : "0.1.0-test",
+    "name" : "Base FHIR Capability Statement"
   },
   {
-    "id": "food-allergy",
-    "type": "ImplementationGuide",
-    "url": "http://somewhere.org/fhir/myig/ImplementationGuide/food-allergy",
-    "version": "0.1.0-test",
-    "name": "FoodAllergyIG"
+    "id" : "food-allergy",
+    "type" : "ImplementationGuide",
+    "url" : "http://somewhere.org/fhir/myig/ImplementationGuide/food-allergy",
+    "version" : "0.1.0-test",
+    "name" : "FoodAllergyIG"
   },
   {
-    "id": "FoodAllergy",
-    "type": "StructureDefinition",
-    "url": "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy",
-    "version": "0.1.0-test",
-    "name": "FoodAllergy"
+    "id" : "FoodAllergy",
+    "type" : "StructureDefinition",
+    "url" : "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergy",
+    "version" : "0.1.0-test",
+    "name" : "FoodAllergy"
   },
   {
-    "id": "FoodAllergyModel",
-    "type": "StructureDefinition",
-    "url": "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergyModel",
-    "version": "0.1.0-test",
-    "name": "FoodAllergyModel"
+    "id" : "FoodAllergyModel",
+    "type" : "StructureDefinition",
+    "url" : "http://somewhere.org/fhir/myig/StructureDefinition/FoodAllergyModel",
+    "version" : "0.1.0-test",
+    "name" : "FoodAllergyModel"
   },
   {
-    "id": "FoodAllergyVS",
-    "type": "ValueSet",
-    "url": "http://somewhere.org/fhir/myig/ValueSet/FoodAllergyVS",
-    "version": "0.1.0-test",
-    "name": "FoodAllergyVS"
+    "id" : "FoodAllergyVS",
+    "type" : "ValueSet",
+    "url" : "http://somewhere.org/fhir/myig/ValueSet/FoodAllergyVS",
+    "version" : "0.1.0-test",
+    "name" : "FoodAllergyVS"
   }
 ]
